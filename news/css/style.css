@@ -1,0 +1,56 @@
+@charset 'utf-8';
+
+/* *****************
+NEWS CSS
+******************** */
+
+#news {
+	margin-bottom: 140px;
+}
+
+/* 見出し
+-------------------- */
+
+#news .heading::before,
+#news .heading::after {
+	bottom: 0;
+	content: "NEWS";
+	font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", "YuGothic", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "verdana", sans-serif;
+	font-size: 65%;
+	left: 0;
+	position: absolute;
+	right: 0;
+	transform: translate(50%, 50%);
+	width: 50%;
+}
+
+/* ページナビ
+-------------------- */
+
+.pagenav {
+	color: #5a5a5a;
+	font-size: 3rem;
+	margin-bottom: 100px;
+}
+
+.pagenav ul {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+}
+
+.pagenav ul li {
+	margin-right: 1em;
+}
+
+.pagenav ul li span a {
+	color: #a20007;
+}
+
+.pagenav ul li:last-child {
+	margin-right: 0;
+}
+
+.pagenav ul li a {
+	color: #5a5a5a;
+}

@@ -1,0 +1,12 @@
+/*
+Theme Name: NewSite
+*/
+
+/****************************************
+	   General Setting 
+*****************************************/
+*{margin:0;padding:0;}body {font-size:0.8em;text-align:center;font-family:'Hiragino Kaku Gothic Pro','ヒラギノ角ゴ Pro W3','Osaka','ＭＳ Ｐゴシック',sans-serif;margin: 0px;padding: 0px;background: #FFF ;color:#000;}
+h1, h2, h3, h4, h5, h6, div, p, pre, ul, ol, dl, dt, dd, address, form, blockquote{font-size:1em;padding: 0;line-height: 1.6;text-align: left;display: block;margin: 0px;}table {line-height: 1.6;font-size:1em;margin : 0;empty-cells: show;}hr,.areaAnchor,.anchor { display : none; }img {border: none;vertical-align: bottom;}li { list-style: none; }acronym,abbr{cursor:help;}option{ padding-right:10px; }*+html option{padding-right:0;}* html option{padding-right:0;}
+a:link{color: #006699;text-decoration:underline;}a:visited{color: #664466;}a:hover{color: #FF0000;text-decoration:none;}a:active{color: #FF6666;}
+div, dl{zoom:1;}div:after, dl:after{content: ".";display: block;visibility: hidden;height: 0.1px;font-size: 0.1em;line-height: 0;clear: both;}* html div, * html dl{display:inline-table;/*\*/display:block;/**/}
+#wpadminbar div:after{clear:none;}#wpadminbar ul:after{clear:none;}

@@ -1,0 +1,240 @@
+@charset 'utf-8';
+
+/* *****************
+kakutenpo CSS
+******************** */
+
+#tenpoHeader h2 {
+	color: #5a5a5a;
+	font-family: 游明朝, YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", HG明朝E, "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+	font-size: 5rem;
+	margin-bottom: 50px;
+}
+
+#tenpoHeader .tenpoHeader_nav {
+	margin-bottom: 25px;
+}
+
+#tenpoHeader .tenpoHeader_nav nav ul {
+	font-size: 2rem;
+	line-height: 25px;
+}
+
+#tenpoHeader .tenpoHeader_nav nav ul li {
+	border-right: 1px solid #000;
+	display: inline-block;
+	padding: 0 0.896em;
+}
+
+#tenpoHeader .tenpoHeader_nav nav ul li:first-child {
+	padding-left: 0;
+}
+
+#tenpoHeader .tenpoHeader_nav nav ul li:last-child {
+	border-right: none;
+}
+
+#tenpoHeader .tenpoHeader_nav nav ul li a {
+	color: #000;
+}
+
+#tenpoHeader .tenpoHeader_nav nav ul li a:hover {
+	border-bottom: 1px solid #000;
+}
+
+#tenpoHeader .keyvisual {
+	margin-bottom: 80px;
+}
+
+#tenpoHeader .keyvisual img {
+	vertical-align: bottom;
+}
+
+#tenpoNews h3 {
+	border-bottom: 1px solid #5a5a5a;
+	color: #5a5a5a;
+	font-family: 游明朝, YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", HG明朝E, "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+	font-size: 5rem;
+	margin-bottom: 70px;
+	padding-bottom: 30px;
+	text-align: center;
+}
+
+#tenpoNews .next {
+	margin-top: 40px;
+}
+
+#tenpoNews .bnr {
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	margin-bottom: 100px;
+}
+
+#tenpoNews .bnr::after,
+#tenpoNews .bnr .bnr_box {
+	width: calc((100% - 40px) / 2);
+}
+
+#tenpoNews .bnr .bnr_box .bgBlue,
+#tenpoNews .bnr .bnr_box .bgRed {
+	overflow: hidden;
+}
+
+#tenpoNews .bnr .bnr_box .bgBlue img,
+#tenpoNews .bnr .bnr_box .bgRed img {
+	display: block;
+	transition-duration: 0.3s;
+}
+
+#tenpoNews .bnr .bnr_box .bgBlue img:hover,
+#tenpoNews .bnr .bnr_box .bgRed img:hover {
+	transform: scale(1.1);
+	transition-duration: 0.3s;
+}
+
+#tenpoNews .bnr .bnr_box {
+	position: relative;
+}
+
+#tenpoNews .bnr .bnr_box .bnr_box_heading {
+	border: 1px solid #fff;
+	color: #fff;
+	font-size: 3.6rem;
+	left: 50%;
+	line-height: 1.66;
+	max-width: 200px;
+	position: absolute;
+	text-align: center;
+	top: 50%;
+	transform: translate(-50%, -80%);
+	width: 100%;
+}
+
+#tenpoNews .bnr .bnr_box .bnr_box_text {
+	background: #fff;
+	color: #5a5a5a;
+	font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+	font-size: 2rem;
+	left: 50%;
+	line-height: 2;
+	max-width: 140px;
+	position: absolute;
+	text-align: center;
+	top: 50%;
+	transform: translate(-50%, 30%);
+	width: 100%;
+}
+
+#tenpoInfo .tenpoInfo_map {
+	height: 0;
+	overflow: hidden;
+	padding-bottom: 39.475%;
+	position: relative;
+}
+
+#tenpoInfo .tenpoInfo_map iframe {
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
+#tenpoInfo .tenpoInfo_list {
+	margin-bottom: 50px;
+}
+
+#tenpoInfo .tenpoInfo_list dl,
+#heisetu .heisetu_list dl {
+	border-bottom: 1px solid #5a5a5a;
+	color: #5a5a5a;
+	display: flex;
+	flex-wrap: wrap;
+	font-size: 2.4rem;
+	line-height: 1.5;
+	padding: 1.20833em 0;
+	width: 100%;
+}
+
+#tenpoInfo .tenpoInfo_list dl dt {
+	width: 20%;
+}
+
+#tenpoInfo .tenpoInfo_list dl dd {
+	width: 80%;
+}
+
+#tenpoInfo .tenpoInfo_map {
+	margin-bottom: 100px;
+}
+
+#service {
+	margin-bottom: 150px;
+}
+
+#tenpoInfo h3,
+#service h3,
+#heisetu h3 {
+	background: #ebebeb;
+	color: #5a5a5a;
+	font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+	font-size: 5rem;
+	height: 2em;
+	line-height: 2em;
+	text-align: center;
+}
+
+#service p {
+	font-size: 2rem;
+	margin: 20px 0 80px 0;
+	text-align: right;
+}
+
+#service .flex div dl {
+	font-size: 2rem;
+	line-height: 2;
+	margin-bottom: 2.5em;
+}
+
+#service .flex div dl:last-child {
+	margin-bottom: 0;
+}
+
+#service .flex div dl dt {
+	color: #b40000;
+}
+
+#heisetu {
+	margin-bottom: 100px;
+}
+
+#heisetu .heisetu_list dl dt {
+	width: 10%;
+}
+
+#heisetu .heisetu_list dl dd {
+	width: 90%;
+}
+
+#heisetu .heisetu_list dl ul {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	width: 100%;
+}
+
+#heisetu .heisetu_list dl ul li:first-child {
+	width: 40%;
+}
+
+#heisetu .heisetu_list dl ul li:last-child {
+	margin-left: 1%;
+	width: 59%;
+}
+
+@media screen and (max-width: 767px) {
+}
+
+@media screen and (max-width: 575px) {
+}

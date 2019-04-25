@@ -1,0 +1,10 @@
+@charset 'utf-8';
+
+/* *****************
+wood CSS
+******************** */
+
+#guide_article .heading::before,
+#guide_article .heading::after {
+	transform: translate(-5%, 50%);
+}

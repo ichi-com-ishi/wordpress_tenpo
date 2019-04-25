@@ -1,0 +1,50 @@
+@charset 'utf-8';
+
+/* *****************
+GUIDE CSS
+******************** */
+
+#guide {
+	margin-bottom: 200px;
+}
+
+#guide .heading::before,
+#guide .heading::after {
+	bottom: 0;
+	content: "GUIDE";
+	font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", "YuGothic", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "verdana", sans-serif;
+	font-size: 65%;
+	left: 0;
+	position: absolute;
+	right: 0;
+	transform: translate(43%, 50%);
+	width: 50%;
+}
+
+#guide .contens_box_heading {
+	border: none;
+	line-height: 1.5;
+	margin-top: -9.1%;
+	padding: 0 4%;
+	transform: translate(-50%, -50%);
+	width: 100%;
+}
+
+#guide .flex-col3 .contens_box p {
+	color: #5a5a5a;
+	font-size: 2.6rem;
+	margin-top: 9.1%;
+}
+
+#guide .flex-col3::after,
+.flex-col3 .flex-child {
+	width: calc((100% - 100px) / 3);
+}
+
+#guide .flex-child {
+	margin-bottom: 50px;
+}
+
+#guide .flex-col3 div:nth-child(n + 10) {
+	margin-bottom: 0;
+}
