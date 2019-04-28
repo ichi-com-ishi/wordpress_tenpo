@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 		<meta name="format-detection" content="telephone=no" />
-		<title>ホームセンタームサシ</title>
+		<title><?php bloginfo( 'name' ); ?></title>
 		<meta
 			name="description"
 			content="ホームセンタームサシのホームページ。わくわくするほど新しい発見がある。なんでも揃う「ホームセンタームサシ」「スーパーセンタームサシ」、アート＆クラフト専門店「アークオアシスデザイン」、高級食材をリーズナブルな価格で提供する大型食品スーパー「ムサシ食品館」など、個性豊かな事業・店舗を当社開発の大型ショッピングゾーンで展開しています。"
@@ -29,7 +29,7 @@
 			<header id="header">
 				<div class="header_top">
 					<h1 class="logo">
-						<a href="index.html"><img src="<?php echo get_template_directory_uri(); ?>/images/common/logp.png" alt="ムサシロゴ"/></a>
+						<a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/common/logp.png" alt="ムサシロゴ"/></a>
 					</h1>
 					<!-- ▼drawer▼ -->
 					<div class="zdo_drawer_menu">
@@ -42,7 +42,7 @@
 						<nav class="zdo_drawer_nav_wrapper">
 							<ul class="zdo_drawer_nav">
 								<li>
-									<a href="index.html">
+									<a href="<?php echo home_url(); ?>">
 										ホーム
 									</a>
 								</li>
@@ -67,7 +67,7 @@
 									</a>
 								</li>
 								<li>
-									<a href="#">
+									<a href="http://www.arcland.co.jp/">
 										企業情報
 									</a>
 								</li>
@@ -88,7 +88,7 @@
 				<div class="nav_wrapper">
 					<nav>
 						<ul class="flex">
-							<li><a href="index.html">ホーム</a></li>
+							<li><a href="<?php echo home_url(); ?>">ホーム</a></li>
 							<li><a href="news/index.html">お知らせ</a></li>
 							<li><a href="flyer/index.html">最新チラシ</a></li>
 							<li><a href="shop/index.html">店舗情報</a></li>
