@@ -5,15 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 		<meta name="format-detection" content="telephone=no" />
-		<title>
-	<?php
-	if ( ! is_home() ) {
-		wp_title( '-', true, 'right' );
-	}
-	bloginfo( 'name' );
-	?>
-	</title>
-
+		<title>ホームセンタームサシ</title>
 		<meta
 			name="description"
 			content="ホームセンタームサシのホームページ。わくわくするほど新しい発見がある。なんでも揃う「ホームセンタームサシ」「スーパーセンタームサシ」、アート＆クラフト専門店「アークオアシスデザイン」、高級食材をリーズナブルな価格で提供する大型食品スーパー「ムサシ食品館」など、個性豊かな事業・店舗を当社開発の大型ショッピングゾーンで展開しています。"
@@ -30,15 +22,6 @@
 		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/common/slick.css" />
 		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/common/slick-theme.css" />
 		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/common/zdo_drawer_menu.css" />
-		<?php
-		wp_head();
-		wp_enqueue_script( 'jquery-2.1.1', get_template_directory_uri() . '/js/jquery-2.1.1.min.js' );
-		wp_enqueue_script( 'zdo_drawer_menu', get_template_directory_uri() . '/js/zdo_drawer_menu.js' );
-
-		// スライダー
-		wp_enqueue_script( 'slick', get_template_directory_uri() . '/js/slick.min.js' );
-		// wp_enqueue_script( 'func_slick', get_template_directory_uri() . '/js/func_slick.js' );
-		?>
 	</head>
 
 	<body>
@@ -46,7 +29,7 @@
 			<header id="header">
 				<div class="header_top">
 					<h1 class="logo">
-						<a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/common/logp.png" alt="ムサシロゴ"/></a>
+						<a href="index.html"><img src="images/common/logp.png" alt="ムサシロゴ"/></a>
 					</h1>
 					<!-- ▼drawer▼ -->
 					<div class="zdo_drawer_menu">
@@ -59,7 +42,7 @@
 						<nav class="zdo_drawer_nav_wrapper">
 							<ul class="zdo_drawer_nav">
 								<li>
-									<a href="<?php echo home_url(); ?>">
+									<a href="index.html">
 										ホーム
 									</a>
 								</li>
@@ -84,7 +67,7 @@
 									</a>
 								</li>
 								<li>
-									<a href="http://www.arcland.co.jp/">
+									<a href="#">
 										企業情報
 									</a>
 								</li>
@@ -93,16 +76,10 @@
 					</div>
 					<!-- ▲drawer▲ -->
 				</div>
-				<?php if ( is_home() ) : ?>
 				<h2 class="bold">毎日のくらしを彩り豊かに</h2>
 				<!-- ▼slider▼ -->
 				<div class="keyvisual slider">
-					<div><img src="<?php echo get_template_directory_uri(); ?>/images/top/top-keyvisual.jpg" alt="トップキービジュアル" /></div>
-					<!-- スライダー
-						<div><img src="images/top/top-keyvisual.jpg" alt="トップキービジュアル" /></div>
 					<div><img src="images/top/top-keyvisual.jpg" alt="トップキービジュアル" /></div>
-					<div><img src="images/top/top-keyvisual.jpg" alt="トップキービジュアル" /></div>
-					<div><img src="images/top/top-keyvisual.jpg" alt="トップキービジュアル" /></div> -->
 				</div>
 				<!-- ▲slider▲ -->
 			</header>
@@ -111,7 +88,7 @@
 				<div class="nav_wrapper">
 					<nav>
 						<ul class="flex">
-							<li><a href="<?php echo home_url(); ?>">ホーム</a></li>
+							<li><a href="index.html">ホーム</a></li>
 							<li><a href="news/index.html">お知らせ</a></li>
 							<li><a href="flyer/index.html">最新チラシ</a></li>
 							<li><a href="shop/index.html">店舗情報</a></li>
@@ -120,4 +97,3 @@
 						</ul>
 					</nav>
 				</div>
-				<?php endif; ?>

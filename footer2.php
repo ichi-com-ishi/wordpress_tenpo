@@ -2,7 +2,7 @@
 				<div class="flex">
 					<div>
 						<dl>
-							<dt class="bold"><a href="shop/">SHOP</a></dt>
+							<dt class="bold"><a href="<?php echo get_template_directory_uri(); ?>/shop/">SHOP</a></dt>
 							<dd><a href="shop/#miyagi">宮城県</a></dd>
 							<dd><a href="shop/#yamagata">山形県</a></dd>
 							<dd><a href="shop/#nigata">新潟県</a></dd>
@@ -57,9 +57,10 @@
 			<!--footer-->
 		</div>
 		<!-- wrapper -->
-		<script src="js/jquery-2.1.1.min.js"></script>
+		<!-- <script src="js/jquery-2.1.1.min.js"></script>
 		<script src="js/slick.min.js"></script>
-		<script src="js/zdo_drawer_menu.js"></script>
+		<script src="js/zdo_drawer_menu.js"></script> -->
 		<!-- <script src="js/func_slick.js"></script> -->
+		<?php wp_footer(); ?>
 	</body>
 </html>
