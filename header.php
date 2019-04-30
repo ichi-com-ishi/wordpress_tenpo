@@ -22,14 +22,15 @@
 		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/common/slick.css" />
 		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/common/slick-theme.css" />
 		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/common/zdo_drawer_menu.css" />
+		<?php wp_head(); ?>
 	</head>
 
-	<body>
+	<body <?php body_class(); ?>>
 		<div class="wrapper">
 			<header id="header">
 				<div class="header_top">
 					<h1 class="logo">
-						<a href="index.html"><img src="images/common/logp.png" alt="ムサシロゴ"/></a>
+						<a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/common/logp.png" alt="ムサシロゴ"/></a>
 					</h1>
 					<!-- ▼drawer▼ -->
 					<div class="zdo_drawer_menu">
@@ -42,32 +43,32 @@
 						<nav class="zdo_drawer_nav_wrapper">
 							<ul class="zdo_drawer_nav">
 								<li>
-									<a href="index.html">
+									<a href="<?php echo home_url(); ?>">
 										ホーム
 									</a>
 								</li>
 								<li>
-									<a href="news/index.html">
+									<a href="<?php echo home_url(); ?>/news/">
 										お知らせ
 									</a>
 								</li>
 								<li>
-									<a href="flyer/index.html">
+									<a href="<?php echo home_url(); ?>/flyer/">
 										最新チラシ
 									</a>
 								</li>
 								<li>
-									<a href="shop/index.html">
+									<a href="/<?php echo home_url(); ?>/shop/">
 										店舗情報
 									</a>
 								</li>
 								<li>
-									<a href="guide/index.html">
+									<a href="<?php echo home_url(); ?>/guide/">
 										売場案内
 									</a>
 								</li>
 								<li>
-									<a href="#">
+									<a href="http://www.arcland.co.jp/">
 										企業情報
 									</a>
 								</li>
@@ -78,9 +79,16 @@
 				</div>
 				<h2 class="bold">毎日のくらしを彩り豊かに</h2>
 				<!-- ▼slider▼ -->
-				<div class="keyvisual slider">
+			<div class="keyvisual slider">
+				<div><img
+						src="<?php echo get_template_directory_uri(); ?>/images/top/top-keyvisual.jpg"
+						alt="トップキービジュアル" /></div>
+				<!-- スライダー
+						<div><img src="images/top/top-keyvisual.jpg" alt="トップキービジュアル" /></div>
 					<div><img src="images/top/top-keyvisual.jpg" alt="トップキービジュアル" /></div>
-				</div>
+					<div><img src="images/top/top-keyvisual.jpg" alt="トップキービジュアル" /></div>
+					<div><img src="images/top/top-keyvisual.jpg" alt="トップキービジュアル" /></div> -->
+			</div>
 				<!-- ▲slider▲ -->
 			</header>
 			<!-- header -->
@@ -88,11 +96,11 @@
 				<div class="nav_wrapper">
 					<nav>
 						<ul class="flex">
-							<li><a href="index.html">ホーム</a></li>
-							<li><a href="news/index.html">お知らせ</a></li>
-							<li><a href="flyer/index.html">最新チラシ</a></li>
-							<li><a href="shop/index.html">店舗情報</a></li>
-							<li><a href="guide/index.html">売場案内</a></li>
+							<li><a href="<?php echo home_url(); ?>">ホーム</a></li>
+							<li><a href="<?php echo home_url(); ?>/news/">お知らせ</a></li>
+							<li><a href="<?php echo home_url(); ?>/flyer/">最新チラシ</a></li>
+							<li><a href="<?php echo home_url(); ?>/shop/">店舗情報</a></li>
+							<li><a href="<?php echo home_url(); ?>/guide/">売場案内</a></li>
 							<li><a href="http://www.arcland.co.jp/">企業情報</a></li>
 						</ul>
 					</nav>
