@@ -17,7 +17,7 @@ Template Name: flyerテンプレート
 
 	<section id="shop">
 		<div class="center">
-			<h2 class="heading">最新チラシ</h2>
+			<h2 class="heading"><?php the_title(); ?></h2>
 		</div>
 
 		<section id="list">
@@ -589,4 +589,5 @@ Template Name: flyerテンプレート
 	</section>
 </div>
 <!-- container -->
-<?php get_footer();
+<?php
+get_footer();

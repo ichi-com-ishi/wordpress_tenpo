@@ -15,13 +15,37 @@
 			content="ホームセンター,スーパーセンター,ムサシ,アークランドサカモト,アークランド,アークオアシス,ムサシ食品館,アークスタイル,アークドラッグ,営業時間,DIY,日用品,金物,建材,新潟県,山形県,富山県,石川県,宮城県,京都府,大阪府,兵庫県,チラシ,長野県,福井県,ムサシプロ"
 		/>
 		<link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet" />
-		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/common/reset.css" />
-		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/common/common.css" />
-		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/style.css" />
-		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/common/sp.css" />
-		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/common/slick.css" />
-		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/common/slick-theme.css" />
-		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/common/zdo_drawer_menu.css" />
+	<link rel="stylesheet"
+		href="<?php echo get_template_directory_uri(); ?>/css/common/reset.css" />
+	<link rel="stylesheet"
+		href="<?php echo get_template_directory_uri(); ?>/css/common/common.css" />
+	<link rel="stylesheet"
+		href="<?php echo get_template_directory_uri(); ?>/css/common/sp.css" />
+	<link rel="stylesheet"
+		href="<?php echo get_template_directory_uri(); ?>/css/common/slick.css" />
+	<link rel="stylesheet"
+		href="<?php echo get_template_directory_uri(); ?>/css/common/slick-theme.css" />
+	<link rel="stylesheet"
+		href="<?php echo get_template_directory_uri(); ?>/css/common/zdo_drawer_menu.css" />
+	<?php if ( is_page( '7' ) ) : ?>
+	<link rel="stylesheet"
+		href="<?php echo get_template_directory_uri(); ?>/flyer/css/style.css" />
+	<?php elseif ( is_page( '47' ) ) : ?>
+	<link rel="stylesheet"
+		href="<?php echo get_template_directory_uri(); ?>/shop/css/style.css" />
+	<?php elseif ( is_page( '49' ) ) : ?>
+	<link rel="stylesheet"
+		href="<?php echo get_template_directory_uri(); ?>/guide/css/style.css" />
+	<?php elseif ( is_page( '41' ) ) : ?>
+	<link rel="stylesheet"
+		href="<?php echo get_template_directory_uri(); ?>/news/css/style.css" />
+	<?php elseif ( is_page( '' ) ) : ?>
+	<link rel="stylesheet"
+		href="<?php echo get_template_directory_uri(); ?>/news/article/css/style.css" />
+	<?php else : ?>
+	<link rel="stylesheet"
+		href="<?php echo get_template_directory_uri(); ?>/css/style.css" />
+	<?php endif; ?>
 		<?php wp_head(); ?>
 	</head>
 
@@ -77,6 +101,7 @@
 					</div>
 					<!-- ▲drawer▲ -->
 				</div>
+				<?php if ( is_home() ) : ?>
 				<h2 class="bold">毎日のくらしを彩り豊かに</h2>
 				<!-- ▼slider▼ -->
 			<div class="keyvisual slider">
@@ -105,3 +130,4 @@
 						</ul>
 					</nav>
 				</div>
+<?php endif; ?>
