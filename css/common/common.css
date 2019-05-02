@@ -601,6 +601,54 @@ img {
 	content: "";
 }
 
+#topic-path {
+	margin-bottom: 30px;
+	padding-top: 40px;
+}
+
+#topic-path ul {
+	font-size: 2rem;
+	vertical-align: middle;
+}
+
+#topic-path ul li a {
+	color: #5a5a5a;
+	transition: all 0.2s;
+}
+
+#topic-path ul li a:hover {
+	color: #a20007;
+}
+
+#topic-path ul li {
+	display: inline-block;
+}
+
+#topic-path ul li::after {
+	content: "\03e";
+	font-size: 2.5rem;
+}
+
+#topic-path ul li:last-child {
+
+	/* margin-left: -0.3em; */
+}
+
+#topic-path ul li:last-child::after {
+	content: "";
+}
+
+/* container
+-------------------- */
+
+.container,
+#footer div.flex {
+	margin: 0 auto;
+	max-width: 1170px;
+	padding: 0 15px;
+	width: 100%;
+}
+
 /* container
 -------------------- */
 
