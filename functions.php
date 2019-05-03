@@ -1,9 +1,30 @@
 <?php
 
+/*【出力カスタマイズ】固定ページで抜粋の機能を有効化 */
+add_post_type_support( 'page', 'excerpt' );
+
+
 // アイキャッチ画像
 add_theme_support( 'post-thumbnails' );
 set_post_thumbnail_size( 350, 250, true );
 
+// タイトルの出力
+add_theme_support( 'title-tag' );
+
+function change_title_tag( $title ) {
+
+	if ( is_category() ) { /* カテゴリーアーカイブの場合 */
+		$title = single_cat_title( '', false );
+	} elseif ( is_tag() ) { /* タグアーカイブの場合 */
+		$title = single_tag_title( '', false );
+	} elseif ( is_post_type_archive( 'parts' ) ) { /* parts投稿タイプのアーカイブの場合 */
+		$title = '任意のタイトル';
+	}
+	return $title;
+}
+add_filter( 'pre_get_document_title', 'change_title_tag' );
+
+// パンくずリスト
 if ( ! function_exists( 'custom_breadcrumb' ) ) {
 	function custom_breadcrumb( $wp_obj = null ) {
 

@@ -5,7 +5,6 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 		<meta name="format-detection" content="telephone=no" />
-		<title>ホームセンタームサシ</title>
 		<meta
 			name="description"
 			content="ホームセンタームサシのホームページ。わくわくするほど新しい発見がある。なんでも揃う「ホームセンタームサシ」「スーパーセンタームサシ」、アート＆クラフト専門店「アークオアシスデザイン」、高級食材をリーズナブルな価格で提供する大型食品スーパー「ムサシ食品館」など、個性豊かな事業・店舗を当社開発の大型ショッピングゾーンで展開しています。"
