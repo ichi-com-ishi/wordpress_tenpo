@@ -36,7 +36,7 @@ Template Name: トップページ用テンプレート
 
 				<div class="next">
 					<p>
-						<a href="#"> &gt;&gt;続きをもっと見る</a>
+						<a href="/news/"> &gt;&gt;続きをもっと見る</a>
 					</p>
 				</div>
 

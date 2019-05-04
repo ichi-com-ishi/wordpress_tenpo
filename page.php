@@ -9,17 +9,16 @@
 	while ( have_posts() ) :
 		the_post();
 		?>
-<div class="post">
-		<?php the_title(); ?>
+<!-- <div class="post"> -->
 
 		<?php the_content(); ?>
-</div><!-- /.post -->
+<!-- </div> -->
+<!-- /.post -->
 <?php endwhile; ?>
 <?php else : ?>
 
 <?php endif; ?>
 					
 </div><!-- /container -->
-				
-<?php get_sidebar(); ?>
+
 <?php get_footer(); ?>

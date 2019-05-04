@@ -81,7 +81,7 @@
 									</a>
 								</li>
 								<li>
-									<a href="/<?php echo home_url(); ?>/shop/">
+									<a href="<?php echo home_url(); ?>/shop/">
 										店舗情報
 									</a>
 								</li>
