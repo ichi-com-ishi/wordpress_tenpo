@@ -5,6 +5,7 @@ Template Name: 売場案内下層ページテンプレート
 ?>
 <?php get_header(); ?>
 			<div class="container">
+			<?php custom_breadcrumb(); ?>
 				<article id="guide_article">
 					<?php
 					if ( have_posts() ) :

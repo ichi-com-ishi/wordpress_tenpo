@@ -8,11 +8,14 @@ add_post_type_support( 'page', 'excerpt' );
 add_theme_support( 'post-thumbnails' );
 set_post_thumbnail_size( 350, 250, true );
 
+// タイトルタグの設定
+// function my_setup_theme() {
+// add_theme_support( 'title-tag' );
+// }
+// add_action( 'after_setup_theme', 'my_setup_theme' );
 // タイトルの出力
 add_theme_support( 'title-tag' );
-
 function change_title_tag( $title ) {
-
 	if ( is_category() ) { /* カテゴリーアーカイブの場合 */
 		$title = single_cat_title( '', false );
 	} elseif ( is_tag() ) { /* タグアーカイブの場合 */

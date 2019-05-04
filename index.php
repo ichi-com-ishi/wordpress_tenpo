@@ -1,8 +1,8 @@
 <?php get_header(); ?>
 
-<div id="contents">
-<div id="main">
-				
+<!-- <div id="contents">
+<div id="main"> -->
+<div class="container">
 <?php if ( have_posts() ) : ?>
 	<?php
 	while ( have_posts() ) :
@@ -23,7 +23,7 @@
 <?php else : ?>
 <?php endif; ?>
 
-</div><!-- /#main -->
+</div><!-- /container -->
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>

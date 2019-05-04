@@ -130,4 +130,3 @@
 					</nav>
 				</div>
 <?php endif; ?>
-<?php custom_breadcrumb(); ?>
