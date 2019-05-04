@@ -1,13 +1,36 @@
 <?php
 
-/*【出力カスタマイズ】固定ページで抜粋の機能を有効化 */
+/*
+【出力カスタマイズ】固定ページで抜粋の機能を有効化 */
 add_post_type_support( 'page', 'excerpt' );
 
+// 概要（抜粋）の文字数調整
+function new_excerpt_mblength( $length ) {
+	return 31; // 抜粋する文字数を31文字に設定(高さ100)
+}
+add_filter( 'excerpt_mblength', 'new_excerpt_mblength' );
+
+// 概要（抜粋）の末の設定
+function new_excerpt_more( $more ) {
+	return '…';
+}
+add_filter( 'excerpt_more', 'new_excerpt_more' );
 
 // アイキャッチ画像
 add_theme_support( 'post-thumbnails' );
-set_post_thumbnail_size( 350, 250, true );
+set_post_thumbnail_size( 350, 250, false );
 
+/**
+ * アイキャッチ画像に対応する
+ */
+// function my_after_setup_theme() {
+// アイキャッチ画像を有効にする
+// add_theme_support( 'post-thumbnails' );
+// アイキャッチ画像サイズを指定する（横：640px 縦：384）
+// 画像サイズをオーバーした場合は切り抜き
+// set_post_thumbnail_size( 350, 250, true );
+// }
+// add_action( 'after_setup_theme', 'my_after_setup_theme' );
 // タイトルタグの設定
 // function my_setup_theme() {
 // add_theme_support( 'title-tag' );

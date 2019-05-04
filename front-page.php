@@ -7,54 +7,29 @@ Template Name: トップページ用テンプレート
 <?php get_header(); ?>
 
 				<section id="news">
+
 					<div class="center">
 						<h2 class="heading_h2">NEWS</h2>
 					</div>
 					<div class="flex-col3">
-						<div class="item flex-child linkbox">
-							<div class="item-image trimming"><img class="photo" src="<?php echo get_template_directory_uri(); ?>/images/common/news-6.jpg" /></div>
-							<div class="item-text">
-								<p class="bold">ダイニチファンヒーターキャンペ ーンは11月5日まで！</p>
-								<a href="#"></a>
-							</div>
-						</div>
-						<div class="item flex-child linkbox">
-							<div class="item-image trimming"><img class="photo" src="<?php echo get_template_directory_uri(); ?>/images/common/news-5.jpg" /></div>
-							<div class="item-text">
-								<p class="bold">バラ苗予約開始しました！カタロ グ配布は店頭にて。</p>
-								<a href="news/article/index.html"></a>
-							</div>
-						</div>
-						<div class="item flex-child linkbox">
-							<div class="item-image trimming"><img class="photo" src="<?php echo get_template_directory_uri(); ?>/images/common/news-4.png" /></div>
-							<div class="item-text">
-								<p class="bold">花王の超得フェア開催中。</p>
-								<a href="#"></a>
-							</div>
-						</div>
-						<div class="item flex-child linkbox">
-							<div class="item-image trimming"><img class="photo" src="<?php echo get_template_directory_uri(); ?>/images/common/news-3.jpg" /></div>
-							<div class="item-text">
-								<p class="bold">収納ボックス『カバコ』シリーズは インテリアにも馴染みます。</p>
-								<a href="#"></a>
-							</div>
-						</div>
-						<div class="item flex-child linkbox">
+				<?php
+				if ( have_posts() ) :
+					while ( have_posts() ) :
+						the_post();
+						?>
+					<div id="post-<?php the_ID(); ?>" <?php post_class( 'item flex-child linkbox' ); ?>>
 							<div class="item-image trimming">
-								<img class="photo" src="<?php echo get_template_directory_uri(); ?>/images/common/news-2.jpg" />
+							<?php the_post_thumbnail( 'thumbnail' ); ?>
 							</div>
-							<div class="item-text">
-								<p class="bold">そろそろ冬準備。タイヤ交換はお 済みですか？</p>
-								<a href="#"></a>
-							</div>
-						</div>
-						<div class="item flex-child linkbox">
-							<div class="item-image trimming"><img class="photo" src="<?php echo get_template_directory_uri(); ?>/images/common/news-1.jpg" /></div>
-							<div class="item-text">
-								<p class="bold">ペットのあったかグッズ。おすす め商品を紹介します。</p>
-								<a href="#"></a>
+							<div class="item-text bold">
+								<?php the_excerpt(); ?>
+								<a href="<?php the_permalink(); ?>"></a>
 							</div>
 						</div>
+						<?php
+					endwhile;
+				endif;
+				?>
 					</div>
 				</section>
 				<!--news-->
