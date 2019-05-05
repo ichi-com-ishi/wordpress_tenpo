@@ -38,7 +38,7 @@
 	<?php elseif ( is_page( '41' ) ) : ?>
 	<link rel="stylesheet"
 		href="<?php echo get_template_directory_uri(); ?>/news/css/style.css" />
-	<?php elseif ( is_page( '' ) ) : ?>
+	<?php elseif ( is_single() ) : ?>
 	<link rel="stylesheet"
 		href="<?php echo get_template_directory_uri(); ?>/news/article/css/style.css" />
 	<?php else : ?>
