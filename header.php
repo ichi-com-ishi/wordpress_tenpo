@@ -41,6 +41,9 @@
 	<?php elseif ( is_single() ) : ?>
 	<link rel="stylesheet"
 		href="<?php echo get_template_directory_uri(); ?>/news/article/css/style.css" />
+	<?php elseif ( is_page() ) : ?>
+	<link rel="stylesheet"
+		href="<?php echo get_template_directory_uri(); ?>/shop/sendaiizumi/css/style.css" />
 	<?php else : ?>
 	<link rel="stylesheet"
 		href="<?php echo get_template_directory_uri(); ?>/css/style.css" />

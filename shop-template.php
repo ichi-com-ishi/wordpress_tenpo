@@ -25,31 +25,41 @@ Template Name: 各店舗ページテンプレート
 					</div>
 					<!-- keyvisual -->
 				</section>
+				
 				<section id="tenpoNews">
 					<h3>News</h3>
 					<div class="flex-col3">
-						<div class="item flex-child linkbox">
-							<div class="item-image trimming"><img class="photo" src="../../images/common/news-6.jpg" /></div>
-							<div class="item-text">
-								<p class="bold">ダイニチファンヒーターキャンペ ーンは11月5日まで！</p>
-								<a href="#"></a>
-							</div>
-						</div>
-						<div class="item flex-child linkbox">
-							<div class="item-image trimming"><img class="photo" src="../../images/common/news-5.jpg" /></div>
-							<div class="item-text">
-								<p class="bold">バラ苗予約開始しました！カタロ グ配布は店頭にて。</p>
-								<a href="../../news/article/index.html"></a>
-							</div>
-						</div>
-						<div class="item flex-child linkbox">
-							<div class="item-image trimming"><img class="photo" src="../../images/common/news-4.png" /></div>
-							<div class="item-text">
-								<p class="bold">花王の超得フェア開催中。</p>
-								<a href="#"></a>
-							</div>
-						</div>
+<?php
+$paged     = (int) get_query_var( 'paged' );
+$args      = array(
+	'posts_per_page' => 3,
+	'paged'          => $paged,
+	'orderby'        => 'post_date',
+	'order'          => 'DESC',
+	'post_type'      => 'post',
+	'post_status'    => 'publish',
+);
+$the_query = new WP_Query( $args );
+if ( $the_query->have_posts() ) :
+	while ( $the_query->have_posts() ) :
+		$the_query->the_post();
+		?>
+	<div id="post-<?php the_ID(); ?>" <?php post_class( 'item flex-child linkbox' ); ?>>
+	<div class="item-image trimming">
+		<?php the_post_thumbnail( 'thumbnail', array( 'class' => 'photo' ) ); ?>
+	</div>
+<div class="item-text bold">
+		<?php the_excerpt(); ?>
+<a href="<?php the_permalink(); ?>"></a>
+</div>
+</div>
+		<?php
+		endwhile;
+	endif;
+?>
+
 					</div>
+
 					<div class="next">
 						<p>
 							<a href="#"> &gt;&gt;News続きをもっと見る</a>
@@ -275,4 +285,5 @@ Template Name: 各店舗ページテンプレート
 				<!-- heisetu -->
 			</div>
 			<!-- container -->
+	<?php wp_reset_postdata(); ?>
 <?php get_footer(); ?>
