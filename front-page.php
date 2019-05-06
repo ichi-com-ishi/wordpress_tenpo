@@ -19,7 +19,7 @@ Template Name: トップページ用テンプレート
 						?>
 					<div id="post-<?php the_ID(); ?>" <?php post_class( 'item flex-child linkbox' ); ?>>
 							<div class="item-image trimming">
-							<?php the_post_thumbnail( 'thumbnail' ); ?>
+							<?php the_post_thumbnail( 'thumbnail', array( 'class' => 'photo' ) ); ?>
 							</div>
 							<div class="item-text bold">
 								<?php the_excerpt(); ?>

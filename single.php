@@ -1,20 +1,22 @@
 <?php get_header(); ?>
 			<div class="container">
 			<?php custom_breadcrumb(); ?>
-			<?php if ( have_posts() ) : ?>
-				<?php
+			<?php
+			if ( have_posts() ) :
 				while ( have_posts() ) :
 					the_post();
 					?>
+					
 				<article id="article">
 					<div class="left">
-						<?php the_content(); ?>
+					<?php the_content(); ?>
 					</div>
 				</article>
 				<!--article-->
-					<?php endwhile; ?>
-				<?php else : ?>
-			<?php endif; ?>
+					<?php
+					endwhile;
+				endif;
+			?>
 			</div>
 			<!-- container -->
 			<section id="area">
@@ -38,7 +40,7 @@
 					</div>
 					<div class="flex-child">
 						<dl>
-							<dt><a href="#">新潟県</a></dt>
+							<dt><a href="/shop/#nigata">新潟県</a></dt>
 							<dd><a href="#">村上店</a></dd>
 							<dd><a href="#">新発田コモ店</a></dd>
 							<dd><a href="#">新潟店</a></dd>
@@ -54,7 +56,7 @@
 					</div>
 					<div class="flex-child">
 						<dl>
-							<dt><a href="#">富山県</a></dt>
+							<dt><a href="/shop/#toyama">富山県</a></dt>
 							<dd><a href="#">富山店</a></dd>
 							<dd><a href="#">氷見店</a></dd>
 							<dd><a href="#">高岡中曽根店</a></dd>
@@ -62,32 +64,32 @@
 							<dd><a href="#">砺波店</a></dd>
 						</dl>
 						<dl>
-							<dt><a href="#">石川県</a></dt>
+							<dt><a href="/shop/#ishikawa">石川県</a></dt>
 							<dd><a href="#">金沢店</a></dd>
 							<dd><a href="#">金沢南店</a></dd>
 						</dl>
 						<dl>
-							<dt><a href="#">福井県</a></dt>
+							<dt><a href="/shop/#fukui">福井県</a></dt>
 							<dd><a href="#">丸岡店</a></dd>
 						</dl>
 					</div>
 					<div class="flex-child">
 						<dl>
-							<dt><a href="#">長野県</a></dt>
+							<dt><a href="/shop/#nagano">長野県</a></dt>
 							<dd><a href="#">長野南店</a></dd>
 							<dd><a href="#">上田店</a></dd>
 						</dl>
 						<dl>
-							<dt><a href="#">京都府</a></dt>
+							<dt><a href="/shop/#kyoto">京都府</a></dt>
 							<dd><a href="#">京都八幡店</a></dd>
 						</dl>
 						<dl>
-							<dt><a href="#">大阪府</a></dt>
+							<dt><a href="/shop/#osaka">大阪府</a></dt>
 							<dd><a href="#">貝塚店</a></dd>
 							<dd><a href="#">美原店</a></dd>
 						</dl>
 						<dl>
-							<dt><a href="#">兵庫県</a></dt>
+							<dt><a href="/shop/#hyogo">兵庫県</a></dt>
 							<dd><a href="#">姫路店</a></dd>
 						</dl>
 					</div>
