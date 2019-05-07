@@ -95,7 +95,7 @@
 							</a>
 						</div>
 						<div class="flex-child holdings_box">
-							<a href="<?php echo home_url(); ?>/guide/guide/pro/">
+							<a href="<?php echo home_url(); ?>/guide/pro/>">
 								<img src="<?php echo get_template_directory_uri(); ?>/images/top/holdings-pro.jpg" alt="" />
 								<div class="holdings_box_text">
 									<h3 class="">TOOL&リフォーム</h3>

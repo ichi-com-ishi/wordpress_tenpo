@@ -27,6 +27,7 @@ a {
 
 img {
 	width: 100%;
+	height: auto;
 }
 
 .none {
@@ -483,7 +484,9 @@ img {
 }
 
 .item-image img {
+	height: auto;
 	vertical-align: bottom;
+	width: 100%;
 }
 
 .item-text {
