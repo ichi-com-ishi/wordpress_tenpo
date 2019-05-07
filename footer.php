@@ -19,7 +19,6 @@
 						<dl>
 							<dt class="bold"><a href="<?php echo home_url(); ?>/guide/">GUIDE</a></dt>
 							<!-- <dd><a href="">ホームセンター</a></dd> -->
-							<dd><a href="<?php echo home_url(); ?>">ホームセンター</a></dd>
 							<dd><a href="<?php echo home_url(); ?>/guide/shizai/">建築資材</a></dd>
 							<dd><a href="<?php echo home_url(); ?>/guide/wood/">木材</a></dd>
 							<dd><a href="<?php echo home_url(); ?>/guide/tool/">工具・金物</a></dd>

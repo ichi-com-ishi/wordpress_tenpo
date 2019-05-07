@@ -26,16 +26,16 @@
 		href="<?php echo get_template_directory_uri(); ?>/css/common/slick-theme.css" />
 	<link rel="stylesheet"
 		href="<?php echo get_template_directory_uri(); ?>/css/common/zdo_drawer_menu.css" />
-	<?php if ( is_page( '7' ) ) : ?> 
+	<?php if ( is_page( '96' ) ) : ?> 
 	<link rel="stylesheet"
 		href="<?php echo get_template_directory_uri(); ?>/flyer/css/style.css" />
-	<?php elseif ( is_page( '47' ) ) : ?> 
+	<?php elseif ( is_page( '99' ) ) : ?> 
 	<link rel="stylesheet"
 		href="<?php echo get_template_directory_uri(); ?>/shop/css/style.css" />
-	<?php elseif ( is_page( '49' ) ) : ?> 
+	<?php elseif ( is_page( '68' ) ) : ?> 
 	<link rel="stylesheet"
 		href="<?php echo get_template_directory_uri(); ?>/guide/css/style.css" />
-	<?php elseif ( is_page( '41' ) ) : ?> 
+	<?php elseif ( is_page( '93' ) ) : ?> 
 	<link rel="stylesheet"
 		href="<?php echo get_template_directory_uri(); ?>/news/css/style.css" /> 
 	<?php elseif ( is_single() ) : ?>
