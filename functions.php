@@ -36,18 +36,18 @@ add_filter( 'pre_get_document_title', 'change_title_tag' );
 
 /* ビジュアルエディタがタグを勝手に削除するのを阻止
 ---------------------------------------------------------- */
-function custom_tiny_mce_before_init( $init_array ) {
-  global $allowedposttags;
+// function custom_tiny_mce_before_init( $init_array ) {
+//   global $allowedposttags;
 
-  $init_array['valid_elements'] = '*[*]'; //すべてのタグを許可(削除されないように)
-  $init_array['extended_valid_elements'] = '*[*]'; //すべてのタグを許可(削除されないように)
-  $init_array['valid_children'] = '+a[' . implode( '|', array_keys( $allowedposttags ) ) . ']'; //aタグ内にすべてのタグを入れられるように
-  $init_array['indent'] = true; //インデントを有効に
-  $init_array['wpautop'] = false; //テキストやインライン要素を自動的にpタグで囲む機能を無効に
+//   $init_array['valid_elements'] = '*[*]'; //すべてのタグを許可(削除されないように)
+//   $init_array['extended_valid_elements'] = '*[*]'; //すべてのタグを許可(削除されないように)
+//   $init_array['valid_children'] = '+a[' . implode( '|', array_keys( $allowedposttags ) ) . ']'; //aタグ内にすべてのタグを入れられるように
+//   $init_array['indent'] = true; //インデントを有効に
+//   $init_array['wpautop'] = false; //テキストやインライン要素を自動的にpタグで囲む機能を無効に
 
-  return $init_array;
-}
-add_filter( 'tiny_mce_before_init', 'custom_tiny_mce_before_init' );
+//   return $init_array;
+// }
+// add_filter( 'tiny_mce_before_init', 'custom_tiny_mce_before_init' );
 
 // パンくずリスト
 if ( ! function_exists( 'custom_breadcrumb' ) ) {
