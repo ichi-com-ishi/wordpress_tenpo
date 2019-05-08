@@ -52,7 +52,7 @@ img {
 	font-size: 4rem;
 	letter-spacing: 0.1em;
 	margin-bottom: 60px;
-	padding-bottom: 40px;
+	padding-bottom: 30px;
 	position: relative;
 	text-indent: 0.1em;
 }
@@ -112,9 +112,7 @@ img {
 	left: 0;
 	position: absolute;
 	right: 0;
-
-	/* transform: translate(50%, 50%);
-	width: 50%; */
+	transform: translate(0%, 50%);
 }
 
 #guide_article .keyvisual {
