@@ -23,8 +23,9 @@
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/guide/css/style.css" />
 	<?php elseif ( is_page( '93' ) ) : ?> 
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/news/css/style.css" />
-		<?php elseif ( is_page() ) : ?>
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/shop/sendaiizumi/css/style.css" />
+	<?php elseif ( is_page() ) : ?>
+	<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri().'/shop/sendaiizumi/css/style.css'; echo '?' . filemtime( get_stylesheet_directory() . '/shop/sendaiizumi/css/style.css'); ?>
+" />
 	<?php elseif ( is_single() ) : ?>
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/news/article/css/style.css" />
 
@@ -59,33 +60,33 @@
 						<nav class="zdo_drawer_nav_wrapper">
 							<ul class="zdo_drawer_nav">
 								<li>
-									<a href="<?php echo home_url(); ?>">
+									<a href="<?php echo network_home_url(); ?>">
 										ホーム
 									</a>
 								</li>
 								<li>
 									<a href="<?php echo home_url(); ?>/news/">
-										お知らせ
+										NEWS
 									</a>
 								</li>
 								<li>
-									<a href="<?php echo home_url(); ?>/flyer/">
+									<a href="<?php echo network_home_url(); ?>flyer/">
 										最新チラシ
 									</a>
 								</li>
 								<li>
-									<a href="<?php echo home_url(); ?>/shop/">
+									<a href="<?php echo home_url(); ?>/stuff/">
+										採用情報
+									</a>
+								</li>
+								<li>
+									<a href="<?php echo home_url('#tenpoInfo'); ?>">
 										店舗情報
 									</a>
 								</li>
 								<li>
-									<a href="<?php echo home_url(); ?>/guide/">
-										売場案内
-									</a>
-								</li>
-								<li>
-									<a href="http://www.arcland.co.jp/">
-										企業情報
+									<a href="<?php  echo home_url('#service'); ?>">
+										各種サービス
 									</a>
 								</li>
 							</ul>
@@ -123,3 +124,4 @@
 					</nav>
 				</div>
 <?php endif; ?>
+</header>

@@ -1,6 +1,6 @@
 <?php
 /*
- Template Name: 各店舗テンプレート
+ Template Name: ムサシ店舗テンプレート
  */
 ?>
 <?php get_header(); ?>

@@ -4,6 +4,26 @@
 kakutenpo CSS
 ******************** */
 
+/* ページナビ
+-------------------- */
+
+.pagenav {
+	color: #5a5a5a;
+	font-size: 3rem;
+	margin-bottom: 100px;
+	text-align: center;
+}
+
+
+.pagenav span {
+	color: #a20007;
+}
+
+.pagenav a {
+	color: #5a5a5a;
+}
+
+
 #tenpoHeader h2 {
 	color: #5a5a5a;
 	font-family: 游明朝, YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", HG明朝E, "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
@@ -127,7 +147,8 @@ kakutenpo CSS
 }
 
 #tenpoInfo .tenpoInfo_map {
-	height: 0;
+	height: 450px;
+	/* height: 0; */
 	overflow: hidden;
 	padding-bottom: 39.475%;
 	position: relative;

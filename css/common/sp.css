@@ -135,11 +135,11 @@
 		content: "\A";
 		white-space: pre;
 	}
-
+	.topic-path ul,
 	#topic-path ul {
 		font-size: 1.6rem;
 	}
-
+	.topic-path ul li::after,
 	#topic-path ul li::after {
 		font-size: 1.6rem;
 	}
@@ -565,6 +565,8 @@
 		width: 50%;
 	}
 
+	
+	.topic-path ul,
 	#topic-path ul {
 		font-size: 1.2rem;
 	}

@@ -1,32 +1,30 @@
 <?php
 /*
- Template Name: 各店舗テンプレート
- */
+Template Name: 採用情報ページ用テンプレート
+*/
 ?>
+
 <?php get_header(); ?>
 
 <!-- <div id="contents">
 <div id="main"> -->
 <div class="container">
-
 <?php custom_breadcrumb(); ?>
-
 <?php if ( have_posts() ) : ?>
 	<?php
 	while ( have_posts() ) :
 		the_post();
 		?>
-		<!-- <div id="main"> -->
-					<!-- </div> -->
+<!-- <div class="post"> -->
+
 		<?php the_content(); ?>
-		<!-- </div> -->
-			<div class="flex-col3">
-	
-</div>
+<!-- </div> -->
+<!-- /.post -->
 <?php endwhile; ?>
 <?php else : ?>
-<?php endif; ?>
 
-</div><!-- container -->
-<?php wp_reset_postdata(); ?>
+<?php endif; ?>
+					
+</div><!-- /container -->
+
 <?php get_footer(); ?>

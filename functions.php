@@ -2,6 +2,7 @@
 
 /**********************************************
  * phpファイルを読み込むショートコード
+ * 投稿内でネットワークホームurlを取得[home_url]
  * 【出力カスタマイズ】固定ページで抜粋の機能を有効化
  * 概要（抜粋）の文字数調整
  * 概要（抜粋）の末の設定
@@ -20,6 +21,14 @@ function loop_main( $atts ) {
 	return ob_get_clean();
 }
 add_shortcode( 'loop', 'loop_main' );
+
+/*
+* 投稿内でネットワークホームurlを取得[home_url]
+*/
+function homeUrl() {
+  return network_home_url();
+}
+add_shortcode('home_url', 'homeUrl');
 
 /*
 *【出力カスタマイズ】固定ページで抜粋の機能を有効化
@@ -72,9 +81,9 @@ if ( ! function_exists( 'custom_breadcrumb' ) ) {
 	function custom_breadcrumb( $wp_obj = null ) {
 
 		// トップページでは何も出力しない
-		if ( is_home() || is_front_page() ) {
-			return false;
-		}
+		// if ( is_home() || is_front_page() ) {
+		// 	return false;
+		// }
 
 		// そのページのWPオブジェクトを取得
 		$wp_obj = $wp_obj ?: get_queried_object();
@@ -82,7 +91,7 @@ if ( ! function_exists( 'custom_breadcrumb' ) ) {
 		echo '<div id="topic-path">' . // id名などは任意で
 				'<ul>' .
 					'<li>' .
-						'<a href="' . home_url() . '"><span>HOME</span></a>' .
+						'<a href="' . network_home_url() . '"><span>HOME</span></a>' .
 					'</li>';
 
 		if ( is_attachment() ) {
@@ -298,4 +307,113 @@ if ( ! function_exists( 'custom_breadcrumb' ) ) {
 		echo '</ul></div>';  // 冒頭に合わせて閉じタグ
 
 	}
+}
+
+/////////////////////////////////////////////////////////
+
+//採用情報に関して
+add_action('init', 'create_post_type');
+function create_post_type(){
+  // カスタム投稿タイプ：採用情報
+  $labels = array(
+    'name' => _x('採用情報', 'post type general name'),
+    'singular_name' => _x('採用情報', 'post type singular name'),
+    'menu_name' => _x('採用情報', 'admin menu'),
+    'name_admin_bar' => _x('採用情報', 'add new on admin bar'),
+    'add_new' => _x('募集追加','blog'),
+    'add_new_item' => __('募集を新規追加'),
+    'new_item' => __('採用情報'),
+    'edit_item' => __('採用情報を編集'),
+    'view_item' => __('採用情報を表示'),
+    'all_items' => __('採用情報一覧'),
+    'search_items' => __('採用情報検索'),
+    'parent_item_colon' => '',
+    'not_found' => __('採用情報が見つかりませんでした。'),
+    'not_found_in_trash' => __('ゴミ箱内に採用情報が見つかりませんでした。'),
+  );
+  $args = array(
+    'labels' => $labels,
+    'public' => true,
+    'publicly_queryable' => true,
+    'show_ui' => true,
+    'show_in_menu' => true,
+    'exclude_from_search' => false,
+    'query_var' => true,
+    'rewrite' => array('slug' => '', 'with_front' => false),
+    'capability_type' => 'post',
+    'has_archive' => true,
+    'hierarchical' => false,
+    'menu_position' => 5,
+    'supports' => array('title', 'stuff_setting'),//'editor'を付与すると本文入力ができる
+  );
+  register_post_type('stuff', $args);
+  //カスタムタクソノミー：blogカテゴリー
+  $labels = array(
+    'name' => _x( '業種', 'taxonomy general name' ),
+    'singular_name' => _x( '業種', 'taxonomy singular name' ),
+    'add_new_item' => __( '新規業種を追加' ),
+    'edit_item' => __( '業種の編集' ),
+    'update_item' => __( '業種を更新' ),
+    'search_items' => __( '業種を検索' ),
+  );
+  $args = array(
+    'labels' => $labels,
+    'public' => true,
+    'show_ui' => true,
+    'show_admin_column' => true,
+    'rewrite' => array('slug' => 'blog', 'with_front' => false),
+    'hierarchical' => true,
+    'update_count_callback' => '_update_post_term_count',
+  );
+  register_taxonomy('blog_category', 'stuff', $args);
+}
+// 固定カスタムフィールドボックス
+function add_stuff_fields() {
+	//add_meta_box(表示される入力ボックスのHTMLのID, ラベル, 表示する内容を作成する関数名, 投稿タイプ, 表示方法)
+	//第4引数のpostをpageに変更すれば固定ページにオリジナルカスタムフィールドが表示されます(custom_post_typeのslugを指定することも可能)。
+	//第5引数はnormalの他にsideとadvancedがあります。
+	add_meta_box( 'stuff_setting', '採用情報', 'insert_stuff_fields', 'stuff', 'normal');
+}
+add_action('admin_menu', 'add_stuff_fields');
+// カスタムフィールドの入力エリア
+function insert_stuff_fields() {
+	global $post;
+	//下記に管理画面に表示される入力エリアを作ります。「get_post_meta()」は現在入力されている値を表示するための記述です。
+	echo '仕事内容： <input type="text" name="stuff_type" value="'.get_post_meta($post->ID, 'stuff_type', true).'" size="50" /><br>';
+	echo '勤務時間： <input type="text" name="stuff_time" value="'.get_post_meta($post->ID, 'stuff_time', true).'" size="50" /><br>';
+	echo '給与： <input type="text" name="stuff_price" value="'.get_post_meta($post->ID, 'stuff_price', true).'" size="50" />　<br>';
+	echo '備考： <input type="text" name="stuff_info" value="'.get_post_meta($post->ID, 'stuff_info', true).'" size="50" />　<br>';
+}
+// カスタムフィールドの値を保存
+function save_stuff_fields( $post_id ) {
+	if(!empty($_POST['stuff_type'])){ //題名が入力されている場合
+		update_post_meta($post_id, 'stuff_type', $_POST['stuff_type'] ); //値を保存
+	}else{ //題名未入力の場合
+		delete_post_meta($post_id, 'stuff_type'); //値を削除
+	}
+	if(!empty($_POST['stuff_time'])){
+		update_post_meta($post_id, 'stuff_time', $_POST['stuff_time'] );
+	}else{
+		delete_post_meta($post_id, 'stuff_time');
+	}
+	if(!empty($_POST['stuff_price'])){
+		update_post_meta($post_id, 'stuff_price', $_POST['stuff_price'] );
+	}else{
+		delete_post_meta($post_id, 'stuff_price');
+	}
+	if(!empty($_POST['stuff_info'])){
+		update_post_meta($post_id, 'stuff_info', $_POST['stuff_info'] );
+	}else{
+		delete_post_meta($post_id, 'stuff_info');
+	}
+}
+add_action('save_post', 'save_stuff_fields');
+
+/*カテゴリ共有*/
+add_action('init', 'central_taxonomies');
+add_action('switch_blog', 'central_taxonomies');
+function central_taxonomies () {
+  global $wpdb;
+  $wpdb->terms =  $wpdb->base_prefix."terms";
+  $wpdb->term_taxonomy =  $wpdb->base_prefix."term_taxonomy";
 }
