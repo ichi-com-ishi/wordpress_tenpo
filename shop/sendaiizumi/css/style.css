@@ -212,6 +212,10 @@ kakutenpo CSS
 	text-align: right;
 }
 
+#service .flex div:first-child {
+	padding-right: 30px;
+}
+
 #service .flex div dl {
 	font-size: 2rem;
 	line-height: 2;
