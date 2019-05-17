@@ -161,12 +161,14 @@ kakutenpo CSS
 	width: 100%;
 }
 
-#tenpoInfo .tenpoInfo_list {
+#tenpoInfo .tenpoInfo_list,
+#barrier .barrier_list {
 	margin-bottom: 50px;
 }
 
 #tenpoInfo .tenpoInfo_list dl,
-#heisetu .heisetu_list dl {
+#heisetu .heisetu_list dl,
+#barrier .barrier_list dl {
 	border-bottom: 1px solid #5a5a5a;
 	color: #5a5a5a;
 	display: flex;
@@ -301,6 +303,27 @@ kakutenpo CSS
 	line-height: 1.5;
 	margin: 20px 0 80px 0;
 	text-align: left;
+}
+
+#barrier .barrier_list dl dd img {
+	height: 100%;
+	margin-right: 1%;
+	max-width: 1.666em;
+	vertical-align: bottom;
+	width: 2.5em;
+}
+
+#barrier .barrier_list dl dd img:last-child {
+	margin-right: 0;
+}
+
+#barrier .barrier_list dl dt {
+	width: 33%;
+}
+
+#barrier .barrier_list dl dd {
+	display: inline-flex;
+	width: 67%;
 }
 
 @media screen and (max-width: 767px) {

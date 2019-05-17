@@ -493,11 +493,13 @@
 		margin: 0 -15px 0 -15px;
 	}
 
-	#tenpoInfo .tenpoInfo_list {
+	#tenpoInfo .tenpoInfo_list,
+	#barrier .barrier_list {
 		margin-bottom: 6.784%;
 	}
 
-	#tenpoInfo .tenpoInfo_list dl {
+	#tenpoInfo .tenpoInfo_list dl,
+	#barrier .barrier_list dl {
 		font-size: 3.129vw;
 	}
 
