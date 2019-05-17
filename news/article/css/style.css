@@ -8,6 +8,12 @@ rose CSS
 	margin: 0 -15px 0 -15px;
 }
 
+#article img {
+	width: initial;
+	max-width: 100%;
+	height: auto;
+}
+
 #article div.left h2 {
 	color: #5a5a5a;
 	font-family: 游明朝, YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", HG明朝E, "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;

@@ -1,6 +1,7 @@
 <?php
 
 /**********************************************
+ * 
  * phpファイルを読み込むショートコード
  * 投稿内でネットワークホームurlを取得[home_url]
  * 【出力カスタマイズ】固定ページで抜粋の機能を有効化
@@ -11,6 +12,7 @@
  * パンくずリスト
  ***********************************************/
 
+// add_filter( 'tiny_mce_before_init', 'override_mce_options' );
 
 /*
 * phpファイルを読み込むショートコード
@@ -91,7 +93,7 @@ if ( ! function_exists( 'custom_breadcrumb' ) ) {
 		echo '<div id="topic-path">' . // id名などは任意で
 				'<ul>' .
 					'<li>' .
-						'<a href="' . network_home_url() . '"><span>HOME</span></a>' .
+						'<a href="' . home_url() . '"><span>HOME</span></a>' .
 					'</li>';
 
 		if ( is_attachment() ) {
@@ -310,6 +312,17 @@ if ( ! function_exists( 'custom_breadcrumb' ) ) {
 }
 
 /////////////////////////////////////////////////////////
+
+//PHPを使う[usephp file=name]
+function short_php($params = array()) {
+  extract(shortcode_atts(array(
+    'file' => 'default'
+  ), $params));
+  ob_start();
+  include(get_theme_root() . '/' . get_template() . "/php/$file.php");
+  return ob_get_clean();
+}
+add_shortcode('usephp', 'short_php');
 
 //採用情報に関して
 add_action('init', 'create_post_type');

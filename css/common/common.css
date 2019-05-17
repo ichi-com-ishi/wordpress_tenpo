@@ -38,7 +38,7 @@ img {
 	opacity: 0.8;
 }
 
-.bnr:hover {
+.banner:hover {
 	opacity: 0.8;
 }
 
@@ -745,6 +745,81 @@ img {
 	width: 100%;
 }
 
-#page-id-12 hr {
-margin: 30px 0 30px 0;
+/* 採用情報
+-------------------- */
+
+.page-template-page-stuff .container > section {
+	margin-top: 30px !important;
+}
+
+.page-template-page-stuff section:nth-child(2) a {
+	color: #a20007;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-weight: 600;
+	text-decoration: underline;
+}
+
+.page-template-page-stuff section:nth-child(2) a:hover {
+	text-decoration: none;
+}
+
+.page-template-page-stuff section:last-child {
+	border-top: 1px solid #5a5a5a;
+	margin-bottom: 60px;
+	padding-top: 30px;
+	line-height: 1.5;
+}
+
+/***stuff***/
+#stuff {
+	border-top: none;
+	padding-top: 0;
+	line-height: 1.5;
+}
+
+#stuff table {
+	border: 1px solid #666;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+#stuff caption {
+	margin-top: 1em;
+	text-align: left;
+	font-weight: 600;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+#stuff table th {
+	border-bottom: 1px solid #666;
+}
+
+#stuff table th,
+#stuff table td {
+	padding: 0 0.5em;
+}
+
+#stuff table th:nth-child(1),
+#stuff table td:nth-child(1) {
+	border-right: 1px solid #666;
+	width: 8em;
+}
+
+#stuff table th:nth-child(2),
+#stuff table td:nth-child(2) {
+	border-right: 1px solid #666;
+	width: 10em;
+}
+
+#stuff table th:nth-child(3),
+#stuff table td:nth-child(3) {
+	border-right: 1px solid #666;
+	width: 9em;
+}
+
+#stuff table th:nth-child(4),
+#stuff table td:nth-child(4) {
+	max-width: 40em;
 }

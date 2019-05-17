@@ -14,7 +14,6 @@ kakutenpo CSS
 	text-align: center;
 }
 
-
 .pagenav span {
 	color: #a20007;
 }
@@ -22,7 +21,6 @@ kakutenpo CSS
 .pagenav a {
 	color: #5a5a5a;
 }
-
 
 #tenpoHeader h2 {
 	color: #5a5a5a;
@@ -148,6 +146,7 @@ kakutenpo CSS
 
 #tenpoInfo .tenpoInfo_map {
 	height: 450px;
+
 	/* height: 0; */
 	overflow: hidden;
 	padding-bottom: 39.475%;
@@ -196,7 +195,10 @@ kakutenpo CSS
 
 #tenpoInfo h3,
 #service h3,
-#heisetu h3 {
+#heisetu h3,
+#toriatukai h3,
+#hikitori h3,
+#barrier h3 {
 	background: #ebebeb;
 	color: #5a5a5a;
 	font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
@@ -216,7 +218,8 @@ kakutenpo CSS
 	padding-right: 30px;
 }
 
-#service .flex div dl {
+#service .flex div dl,
+#hikitori .flex div dl {
 	font-size: 2rem;
 	line-height: 2;
 	margin-bottom: 2.5em;
@@ -226,7 +229,8 @@ kakutenpo CSS
 	margin-bottom: 0;
 }
 
-#service .flex div dl dt {
+#service .flex div dl dt,
+#hikitori .flex div dl dt {
 	color: #b40000;
 }
 
@@ -235,11 +239,11 @@ kakutenpo CSS
 }
 
 #heisetu .heisetu_list dl dt {
-	width: 10%;
+	width: 15%;
 }
 
 #heisetu .heisetu_list dl dd {
-	width: 90%;
+	width: 85%;
 }
 
 #heisetu .heisetu_list dl ul {
@@ -256,6 +260,47 @@ kakutenpo CSS
 #heisetu .heisetu_list dl ul li:last-child {
 	margin-left: 1%;
 	width: 59%;
+}
+
+#toriatukai .shizai_table {
+	margin: 30px 0 130px 0;
+}
+
+#toriatukai .shizai_table table {
+	text-align: center;
+	width: 100%;
+}
+
+#toriatukai .shizai_table table,
+#toriatukai .shizai_table table thead tr th,
+#toriatukai .shizai_table table thead tr td,
+#toriatukai .shizai_table table tbody tr th,
+#toriatukai .shizai_table table tbody tr td {
+	border: 1px solid #5a5a5a;
+	border-collapse: collapse;
+}
+
+#toriatukai .shizai_table table thead tr th,
+#toriatukai .shizai_table table thead tr td,
+#toriatukai .shizai_table table tbody tr th,
+#toriatukai .shizai_table table tbody tr td {
+	font-size: 1.8rem;
+	line-height: 1.5;
+	padding: 0.5em 0.5em;
+}
+
+#toriatukai .shizai_table table thead,
+#toriatukai .shizai_table table tbody tr th {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-weight: 600;
+}
+
+#hikitori p {
+	font-size: 2rem;
+	line-height: 1.5;
+	margin: 20px 0 80px 0;
+	text-align: left;
 }
 
 @media screen and (max-width: 767px) {

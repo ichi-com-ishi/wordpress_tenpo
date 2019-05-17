@@ -121,8 +121,8 @@
 	}
 
 	#guide .contens_box_heading.petCente {
-		transform: translate(-50%, -50%);
-	}
+    transform: translate(-50%, -50%);
+}
 }
 
 @media screen and (max-width: 767px) {
@@ -135,12 +135,10 @@
 		content: "\A";
 		white-space: pre;
 	}
-
 	.topic-path ul,
 	#topic-path ul {
 		font-size: 1.6rem;
 	}
-
 	.topic-path ul li::after,
 	#topic-path ul li::after {
 		font-size: 1.6rem;
@@ -411,8 +409,8 @@
 	}
 
 	#guide .contens_box_heading.petCente {
-		transform: translate(-50%, -105%);
-	}
+    transform: translate(-50%, -105%);
+}
 
 	/* ====================
 	shizai
@@ -432,10 +430,7 @@
 
 	#tenpoHeader .tenpoHeader_nav,
 	#service,
-	#heisetu,
-	#toriatukai,
-	#hikitori,
-	#barrier {
+	#heisetu {
 		display: none;
 	}
 
@@ -522,7 +517,7 @@
 	}
 
 	/***stuff***/
-	#stuff table th:nth-child(1),
+		#stuff table th:nth-child(1),
 	#stuff table td:nth-child(1) {
 		width: 5em;
 	}
@@ -591,6 +586,7 @@
 		width: 50%;
 	}
 
+	
 	.topic-path ul,
 	#topic-path ul {
 		font-size: 1.2rem;
@@ -677,4 +673,5 @@
 	#guide .contens_box_heading.petCente {
 		transform: translate(-50%, -160%);
 	}
+
 }

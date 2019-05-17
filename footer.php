@@ -5,7 +5,7 @@
 							<dt class="bold"><a href="<?php echo network_home_url(); ?>shop/">SHOP</a></dt>
 							<dd><a href="<?php echo network_home_url(); ?>shop/#miyagi">宮城県</a></dd>
 							<dd><a href="<?php echo network_home_url(); ?>shop/#yamagata">山形県</a></dd>
-							<dd><a href="<?php echo network_home_url(); ?>shop/#nigata">新潟県</a></dd>
+							<dd><a href="<?php echo network_home_url(); ?>/shop/#niigata">新潟県</a></dd>
 							<dd><a href="<?php echo network_home_url(); ?>shop/#toyama">富山県</a></dd>
 							<dd><a href="<?php echo network_home_url(); ?>shop/#ishikawa">石川県</a></dd>
 							<dd><a href="<?php echo network_home_url(); ?>shop/#fukui">福井県</a></dd>
