@@ -60,8 +60,9 @@
 		<!-- wrapper -->
 		<script src="<?php echo get_template_directory_uri(); ?>/js/jquery-2.1.1.min.js"></script>
 		<script src="<?php echo get_template_directory_uri(); ?>/js/slick.min.js"></script>
-		<script src="<?php echo get_template_directory_uri(); ?>/js/zdo_drawer_menu.js"></script>
+		<script src="<?php echo get_stylesheet_directory_uri().'/js/zdo_drawer_menu.js'; echo '?' . filemtime(get_stylesheet_directory() . '/js/zdo_drawer_menu.js'); ?>"></script>
 		<script src="<?php echo get_template_directory_uri(); ?>/js/func_slick.js"></script>
+		<script src="<?php echo get_template_directory_uri(); ?>/js/func_scroll.js"></script>
 		<?php wp_footer(); ?>
 	</body>
 </html>

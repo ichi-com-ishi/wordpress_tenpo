@@ -319,11 +319,15 @@
 		width: 100%;
 	}
 
-	#article div.left h2 {
-		font-size: 3rem;
+	#article h2 {
+		font-size: 4rem;
 	}
 
-	#article div.left p {
+	#article h3 {
+		font-size: 3.4rem;
+	}
+
+	#article p {
 		font-size: 1.8rem;
 	}
 
@@ -613,11 +617,15 @@
 	article
 	==================== */
 
-	#article div.left h2 {
-		font-size: 1.8rem;
+	#article h2 {
+		font-size: 2.4rem;
 	}
 
-	#article div.left p {
+	#article h3 {
+		font-size: 2rem;
+	}
+
+	#article p {
 		font-size: 1.4rem;
 	}
 

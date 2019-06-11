@@ -121,8 +121,8 @@
 	}
 
 	#guide .contens_box_heading.petCente {
-    transform: translate(-50%, -50%);
-}
+		transform: translate(-50%, -50%);
+	}
 }
 
 @media screen and (max-width: 767px) {
@@ -135,10 +135,12 @@
 		content: "\A";
 		white-space: pre;
 	}
+
 	.topic-path ul,
 	#topic-path ul {
 		font-size: 1.6rem;
 	}
+
 	.topic-path ul li::after,
 	#topic-path ul li::after {
 		font-size: 1.6rem;
@@ -317,11 +319,15 @@
 		width: 100%;
 	}
 
-	#article div.left h2 {
-		font-size: 3rem;
+	#article h2 {
+		font-size: 4rem;
 	}
 
-	#article div.left p {
+	#article h3 {
+		font-size: 3.4rem;
+	}
+
+	#article p {
 		font-size: 1.8rem;
 	}
 
@@ -409,8 +415,8 @@
 	}
 
 	#guide .contens_box_heading.petCente {
-    transform: translate(-50%, -105%);
-}
+		transform: translate(-50%, -105%);
+	}
 
 	/* ====================
 	shizai
@@ -430,7 +436,10 @@
 
 	#tenpoHeader .tenpoHeader_nav,
 	#service,
-	#heisetu {
+	#heisetu,
+	#toriatukai,
+	#hikitori,
+	#barrier {
 		display: none;
 	}
 
@@ -488,11 +497,13 @@
 		margin: 0 -15px 0 -15px;
 	}
 
-	#tenpoInfo .tenpoInfo_list {
+	#tenpoInfo .tenpoInfo_list,
+	#barrier .barrier_list {
 		margin-bottom: 6.784%;
 	}
 
-	#tenpoInfo .tenpoInfo_list dl {
+	#tenpoInfo .tenpoInfo_list dl,
+	#barrier .barrier_list dl {
 		font-size: 3.129vw;
 	}
 
@@ -517,7 +528,7 @@
 	}
 
 	/***stuff***/
-		#stuff table th:nth-child(1),
+	#stuff table th:nth-child(1),
 	#stuff table td:nth-child(1) {
 		width: 5em;
 	}
@@ -586,7 +597,6 @@
 		width: 50%;
 	}
 
-	
 	.topic-path ul,
 	#topic-path ul {
 		font-size: 1.2rem;
@@ -607,11 +617,15 @@
 	article
 	==================== */
 
-	#article div.left h2 {
-		font-size: 1.8rem;
+	#article h2 {
+		font-size: 2.4rem;
 	}
 
-	#article div.left p {
+	#article h3 {
+		font-size: 2rem;
+	}
+
+	#article p {
 		font-size: 1.4rem;
 	}
 
@@ -673,5 +687,4 @@
 	#guide .contens_box_heading.petCente {
 		transform: translate(-50%, -160%);
 	}
-
 }

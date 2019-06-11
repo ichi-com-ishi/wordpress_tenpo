@@ -46,6 +46,52 @@ img {
 	opacity: 0.8;
 }
 
+/* ワードプレス装飾
+==================== */
+
+strong {
+	font-weight: bold;
+}
+
+em {
+	font-style: italic;
+}
+
+blockquote {
+	background: #efefef;
+	box-sizing: border-box;
+	color: #555;
+	font-style: italic;
+	padding: 30px 15px 8px 15px;
+	position: relative;
+}
+
+blockquote::before {
+	color: #cfcfcf;
+	content: "\f10d";
+	display: inline-block;
+	font-family: "Font Awesome 5 Free";
+	font-size: 28px;
+	font-weight: 900;
+	left: 15px;
+	line-height: 1;
+	position: absolute;
+	top: 13px;
+}
+
+blockquote p {
+	line-height: 1.7;
+	margin: 10px 0;
+	padding: 0;
+}
+
+blockquote cite {
+	color: #888;
+	display: block;
+	font-size: 0.9em;
+	text-align: right;
+}
+
 /* コモン
 ==================== */
 
@@ -766,16 +812,16 @@ img {
 
 .page-template-page-stuff section:last-child {
 	border-top: 1px solid #5a5a5a;
+	line-height: 1.5;
 	margin-bottom: 60px;
 	padding-top: 30px;
-	line-height: 1.5;
 }
 
 /***stuff***/
 #stuff {
 	border-top: none;
-	padding-top: 0;
 	line-height: 1.5;
+	padding-top: 0;
 }
 
 #stuff table {
@@ -787,13 +833,13 @@ img {
 #stuff caption {
 	margin-top: 1em;
 	text-align: left;
-	font-weight: 600;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
 }
 
 #stuff table th {
 	border-bottom: 1px solid #666;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-weight: 600;
 }
 
 #stuff table th,

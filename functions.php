@@ -135,7 +135,7 @@ if ( ! function_exists( 'custom_breadcrumb' ) ) {
 					 '</li>';
 
 			} else {
-				$the_tax = 'category';  // 通常の投稿の場合、カテゴリーを表示
+				$the_tax = '';  // 通常の投稿の場合、カテゴリーを表示
 			}
 
 			// タクソノミーが紐づいていれば表示
