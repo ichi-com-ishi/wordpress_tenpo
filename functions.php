@@ -93,8 +93,8 @@ if ( ! function_exists( 'custom_breadcrumb' ) ) {
 		echo '<div id="topic-path">' . // id名などは任意で
 				'<ul>' .
 					'<li>' .
-						'<a href="' . home_url() . '"><span>HOME</span></a>' .
-					'</li>';
+						'<a href="' . network_home_url() . '"><span>HOME</span></a>' .
+					'</li>'; // 親のトップへ戻る
 
 		if ( is_attachment() ) {
 
