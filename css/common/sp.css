@@ -435,7 +435,7 @@
 	==================== */
 
 	#tenpoHeader .tenpoHeader_nav,
-	#service,
+	/* #service, */
 	#heisetu,
 	#toriatukai,
 	#hikitori,
@@ -505,6 +505,35 @@
 	#tenpoInfo .tenpoInfo_list dl,
 	#barrier .barrier_list dl {
 		font-size: 3.129vw;
+	}
+
+	/* ====================
+	service
+	==================== */
+
+	#service {
+		margin-bottom: 19.5%;
+	}
+
+	#service h3 {
+		font-size: 2.8rem;
+		margin-left: -15px;
+		margin-right: -15px;
+	}
+
+	#service p {
+		font-size: 1.6rem;
+		margin: 2.6% 0 10.4% 0;
+		text-align: left;
+	}
+
+	#service .flex {
+		flex-direction: column;
+		flex-wrap: wrap;
+	}
+
+	#service .flex div dl {
+		font-size: 1.6rem;
 	}
 
 	/* guide_article共通
