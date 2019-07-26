@@ -15,29 +15,37 @@
         />
     <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet" />
 
-    <?php if (is_page('96')) : ?> 
+    <?php if (is_page('96')): ?> 
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/flyer/css/style.css" />
-    <?php elseif (is_page('99')) : ?> 
+    <?php elseif (is_page('99')): ?> 
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/shop/css/style.css" />
-    <?php elseif (is_page('68')) : ?> 
+    <?php elseif (is_page('68')): ?> 
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/guide/css/style.css" />
-    <?php elseif (is_page('93')) : ?> 
+    <?php elseif (is_page('93')): ?> 
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/news/css/style.css" />
-    <?php elseif (is_page()) : ?>
-    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri().'/shop/sendaiizumi/css/style.css';
-    echo '?' . filemtime(get_stylesheet_directory() . '/shop/sendaiizumi/css/style.css'); ?>
+    <?php elseif (is_page()): ?>
+    <link rel="stylesheet" href="<?php
+    echo get_stylesheet_directory_uri() . '/shop/sendaiizumi/css/style.css';
+    echo '?' . filemtime(get_stylesheet_directory() . '/shop/sendaiizumi/css/style.css');
+    ?>
 " />
-    <?php elseif (is_single()) : ?>
-    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri().'/news/article/css/style.css';
-    echo '?' . filemtime(get_stylesheet_directory() . '/news/article/css/style.css'); ?>">
-    <?php else : ?>
+    <?php elseif (is_single()): ?>
+    <link rel="stylesheet" href="<?php
+    echo get_stylesheet_directory_uri() . '/news/article/css/style.css';
+    echo '?' . filemtime(get_stylesheet_directory() . '/news/article/css/style.css');
+    ?>">
+    <?php else: ?>
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/style.css" />
     <?php endif; ?>
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/common/reset.css" />
-    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri().'/css/common/common.css';
-    echo '?' . filemtime(get_stylesheet_directory() . '/css/common/common.css'); ?>">
-    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri().'/css/common/sp.css';
-    echo '?' . filemtime(get_stylesheet_directory() . '/css/common/sp.css'); ?>">
+    <link rel="stylesheet" href="<?php
+    echo get_stylesheet_directory_uri() . '/css/common/common.css';
+    echo '?' . filemtime(get_stylesheet_directory() . '/css/common/common.css');
+    ?>">
+    <link rel="stylesheet" href="<?php
+    echo get_stylesheet_directory_uri() . '/css/common/sp.css';
+    echo '?' . filemtime(get_stylesheet_directory() . '/css/common/sp.css');
+    ?>">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/common/slick.css" />
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/common/slick-theme.css" />
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/common/zdo_drawer_menu.css" />
@@ -50,7 +58,7 @@
             <header id="header">
                 <div class="header_top">
                     <h1 class="logo">
-                        <a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/common/logp.png" alt="ムサシロゴ"/></a>
+                        <a href="<?php echo network_home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/common/logp.png" alt="ムサシロゴ"/></a>
                     </h1>
                     <!-- ▼drawer▼ -->
                     <div class="zdo_drawer_menu">
@@ -97,7 +105,7 @@
                     </div>
                     <!-- ▲drawer▲ -->
                 </div>
-                <?php if (is_home()) : ?>
+                <?php if (is_home()): ?>
                 <h2 class="bold">毎日のくらしを彩り豊かに</h2>
                 <!-- ▼slider▼ -->
             <div class="keyvisual slider">

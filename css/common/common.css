@@ -34,6 +34,10 @@ img {
   visibility: hidden;
 }
 
+.hide {
+  display: none;
+}
+
 .item:hover {
   opacity: .8;
 }
