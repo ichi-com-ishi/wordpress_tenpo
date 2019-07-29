@@ -1,9 +1,11 @@
 <?php get_header(); ?>
 			<div class="container">
 			<?php custom_breadcrumb(); ?>
-			<?php if (have_posts()):
-     while (have_posts()):
-       the_post(); ?>
+			<?php
+			if ( have_posts() ) :
+				while ( have_posts() ) :
+					the_post();
+					?>
 					
 				<article id="article">
 					<div class="left">
@@ -12,12 +14,13 @@
 				</article>
 				<!--article-->
 					<?php
-     endwhile;
-   endif; ?>
+					endwhile;
+				endif;
+			?>
 			</div>
 			<!-- container -->
 			<section id="area">
-				<h3 class="area_heading center">店舗一覧</h3>
+				<h3 class="area_heading center">開催店舗</h3>
 				<div class="flex-col4">
 					<div class="flex-child">
 					<dl>
